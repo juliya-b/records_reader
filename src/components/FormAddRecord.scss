@@ -1,0 +1,118 @@
+@import "./src/style/default";
+
+.primary-font {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: 1.2em;
+}
+
+body {
+  background: $nandor;
+}
+.add-record {
+  margin: 20px auto;
+  padding: 30px 60px;
+  border-radius: 20px;
+  background: $vistaBlue;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+}
+.add-record__head {
+  max-width: 100%;
+  margin: 0 auto 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $white;
+}
+.add-record__wrap {
+  width: 100%;
+  margin: 0 auto;
+  &:after {
+    content: '';
+    display: block;
+    clear:both;
+  }
+}
+.add-record__btn {
+  padding: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  float: right;
+  background: $white;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+  outline: none;
+  &:hover {
+    cursor: pointer;
+    background: $coconutCream;
+  }
+}
+.add-record__field {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  margin-bottom: 15px;
+  &>input {
+    padding: 5px 10px;
+  }
+  &>select {
+    padding: 2px 10px;
+  }
+  &>textarea {
+    resize: none;
+    padding: 10px;
+  }
+  input,
+  textarea,
+  select{
+    @extend .primary-font;
+    display: block;
+    flex-basis: 80%;
+    max-width: 80%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+    font-size: 12px;
+    color: $black;
+    &::-webkit-input-placeholder {
+      color: rgba($black, 0.7);
+    }
+    &::-moz-placeholder {
+      color: rgba($black, 0.7);
+    }
+    &:-ms-input-placeholder {
+      color: rgba($black, 0.7);
+    }
+    &:-moz-placeholder {
+      color: rgba($black, 0.7);
+    }
+  }
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &>span {
+    @extend .primary-font;
+    display: block;
+    flex-basis: 20%;
+    max-width: 20%;
+    font-size: 12px;
+    color: $white;
+    text-transform: uppercase;
+  }
+}
+.wrap-category {
+  flex-basis: 80%;
+  max-width: 80%;
+}

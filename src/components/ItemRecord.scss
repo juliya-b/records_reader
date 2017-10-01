@@ -1,0 +1,82 @@
+@import "./src/style/default";
+
+.record {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 22%;
+  margin-right: 4%;
+  margin-bottom: 10px;
+  background: $lightOrange;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+  &:hover {
+    &>span {
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
+  &>span {
+    @extend .primary-font;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 20px;
+    color: $white;
+    opacity: 0;
+    transition: all .3s ease-in;
+  }
+}
+.record__category {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 10px;
+  width:100%;
+  background: $vistaBlue;
+  border-radius: 10px 10px 0 0;
+  span,
+  p{
+    @extend .primary-font;
+    color: $white;
+  }
+  p{
+    margin-left: 10px;
+    text-transform: uppercase;
+  }
+}
+.record__date {
+  @extend .primary-font;
+  float: right;
+  padding: 10px;
+  color: $black;
+}
+.record__name {
+  @extend .primary-font;
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  color: $black;
+  p {
+    margin-left: 10px;
+  }
+}
+.record__description {
+  @extend .primary-font;
+  padding: 10px;
+}
+.record__total {
+  @extend .primary-font;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: $coconutCream;
+  border-radius: 0 0 10px 10px;
+}

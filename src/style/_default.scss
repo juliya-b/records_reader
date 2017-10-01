@@ -1,0 +1,14 @@
+@import "reset";
+@import "fonts";
+@import "vars";
+
+* {
+  box-sizing: border-box;
+}
+
+.primary-font {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: 1.2em;
+}
